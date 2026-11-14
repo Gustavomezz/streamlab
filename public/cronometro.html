@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<title>Cronómetro de prueba StreamLab</title>
+<style>
+  *{box-sizing:border-box} body{margin:0;background:#10151e;color:white;font-family:Arial,sans-serif;display:grid;place-content:center;height:100vh;text-align:center} h1{font-size:48px;margin:0 0 30px} #clock{font:700 110px monospace;font-variant-numeric:tabular-nums} #epoch{font:36px monospace;color:#2ec4b6;margin-top:30px} p{font-size:28px;color:#bdc9d9}
+</style>
+<h1>StreamLab · Prueba en vivo</h1>
+<div id="clock"></div><div id="epoch"></div>
+<p>Gustavo Martínez y Jovanni Hernández</p>
+<script>
+const start=Date.now();
+function tick(){const now=Date.now(),elapsed=(now-start)/1000;document.getElementById('clock').textContent=elapsed.toFixed(2)+' s';document.getElementById('epoch').textContent='UTC ms: '+now;requestAnimationFrame(tick)}tick();
+</script>
+</html>
