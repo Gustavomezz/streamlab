@@ -2,6 +2,8 @@
 
 Práctica de Cómputo en la Nube. Plataforma de transmisión con canales, categorías, chat, seguidores y grabaciones MP4.
 
+**Web para revisión:** http://3.147.8.83
+
 **Integrantes:** Gustavo Adolfo Martínez Enríquez y Jovanni Emmanuel Hernández Martínez.
 
 ## Ejecutar en local
@@ -40,3 +42,17 @@ El recorrido comprueba los diez puntos del manual contra HTTP, RTMP, HLS y Socke
 ## Origen del código
 
 Basado en el Anexo B y la especificación del **Manual StreamLab: Streaming en AWS**, proporcionado por el profesor Monico Sánchez Velasco. Se adaptó la configuración a macOS, se restauraron los saltos de línea al extraer el PDF, se añadió el recorrido de pruebas y se hizo configurable la duración HLS. Se usó Codex como apoyo.
+
+## Resultados de la práctica
+
+Las diez verificaciones pasaron en local y en la instancia de prueba de AWS. La copia definitiva también se probó con OBS, dos sesiones de Chrome, chat y reproducción del VOD.
+
+| hls_time | Lecturas | Media | Desviación muestral |
+| --- | --- | --- | --- |
+| 1 s | 3 | 5.58 s | 0.004 s |
+| 2 s | 5 | 6.90 s | 0.016 s |
+| 4 s | 3 | 7.79 s | 0.012 s |
+
+Se comparó el tiempo UTC visible en el video con la hora de captura del navegador. Las lecturas son aproximadas (±0.2 s). Con `hls_time=1`, los segmentos reales siguieron cerca de 2 segundos por el intervalo de fotogramas clave de OBS. Un VOD de 143.30 segundos y 47,704,754 bytes dio una tasa media de 2.663 Mbps.
+
+La instancia temporal se terminó después de copiar los datos. El servidor definitivo se conserva activo para la revisión; la transmisión de prueba se detuvo y las grabaciones permanecen disponibles.
