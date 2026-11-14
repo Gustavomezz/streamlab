@@ -45,7 +45,7 @@ Basado en el Anexo B y la especificación del **Manual StreamLab: Streaming en A
 
 ## Resultados de la práctica
 
-Las diez verificaciones pasaron en local y en la instancia de prueba de AWS. La copia definitiva también se probó con OBS, dos sesiones de Chrome, chat y reproducción del VOD. También se confirmó el acceso desde un celular con datos móviles.
+Las diez verificaciones pasaron en local y en la instancia de prueba de AWS. La copia definitiva también se probó con OBS, dos sesiones de Chrome, chat y reproducción del VOD. También se confirmó el acceso desde un celular.
 
 | hls_time | Lecturas | Media | Desviación muestral |
 | --- | --- | --- | --- |
